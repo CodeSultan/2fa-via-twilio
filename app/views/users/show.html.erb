@@ -1,0 +1,11 @@
+
+<div style="width: 50%; margin: auto">
+  <h2><%= @user.firstName + " " + @user.lastName %></h2>
+  <h3><%= @user.email %></h3>
+  <h5>Account Status: <% if @user.verified? %>Verified<% else -%>Not Verified<% end -%></h5>
+    <% if !@user.verified? %>
+      <h5>
+        <%= link_to "Need 2FA: Verify your account now.", register_verify_path %>
+      </h5>
+  <% end -%>
+</div>

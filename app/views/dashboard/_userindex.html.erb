@@ -1,0 +1,27 @@
+<% @users.each do |user|
+  if !user.verified?
+    veri = "No"
+  else veri = "Yes"
+  end
+
+  if user.tier_level == 1
+    tier = "Admin"
+  else tier = "User"
+  end
+%>
+    <tr>
+      <td><%= tier %></td>
+      <td><%= user.id %></td>
+      <td><%= user.firstName %></td>
+      <td><%= user.lastName %></td>
+      <td><%= user.email %></td>
+      <td><%= user.countryCode %></td>
+      <td><%= user.phoneNumber %></td>
+      <td><%= veri %></td>
+      <td><%= user.verification_code %></td>
+      <td><%= user.created_at %></td>
+      <td>
+        <%= link_to "Delete", dashboard_users_path, method: :delete, data: { confirm: "Are you sure to delete this user: " + user.email } %>
+      </td>
+    </tr>
+<% end %>

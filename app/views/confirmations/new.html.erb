@@ -1,0 +1,26 @@
+
+<div style="width: 50%; margin:auto; overflow: auto">
+
+  <h1>Just To Be Safe...2FA</h1>
+  <h4>
+    Your account has been created, but we need to make sure you're a human
+    in control of the phone number you gave us. Can you please enter the
+    verification code we just sent to your phone?
+  </h4>
+
+  <%= form_tag register_verify_path do %>
+      <div class="form-group">
+        <%= label_tag :verification_code, "Verification Code:" %>
+        <%= text_field_tag :verification_code, '', class: "form-control" %>
+      </div>
+      <%= flash.now[:error] %>
+      <%= flash[:notice] %>
+      <br>
+      <button type="submit" class="btn btn-primary" style="margin-top: 15px">Verify Token</button>
+  <% end -%>
+
+  <hr>
+  <%= form_tag register_resend_path do %>
+      <button type="submit" class="btn">Resend code</button>
+  <% end -%>
+</div>

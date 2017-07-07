@@ -1,0 +1,14 @@
+<% @orders.each do |order| %>
+    <tr>
+      <td><%= order.user_id %></td>
+      <td><%= order.order_name %></td>
+      <td><%= order.api_key %></td>
+      <td><%= order.api_secret_key %></td>
+      <td><%= order.exchange_type %></td>
+      <td><%= order.frequency_type %></td>
+      <td><%= order.invest_type %></td>
+      <td><%= number_to_currency order.amount %></td>
+      <td><%= link_to "Edit",  class: "btn btn-primary"%></td>
+      <td><%= link_to "Delete",  class: "btn btn-primary"%></td>
+    </tr>
+<% end %>

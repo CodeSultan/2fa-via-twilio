@@ -1,0 +1,23 @@
+{:uriI"Öfile://app/assets/api/xeditable-groups.json?type=application/json&id=a37dfa7eed439c83a014977eb8af37f1db97739a0c7778b88d00d91a7a75973c:ET:load_pathI"app/assets/api;T:filenameI")app/assets/api/xeditable-groups.json;T:	nameI"xeditable-groups;T:logical_pathI"xeditable-groups.json;T:content_typeI"application/json;T:sourceI"Ù[{
+  "value": "0",
+  "text": "Guest"
+}, {
+  "value": "1",
+  "text": "Service"
+}, {
+  "value": "2",
+  "text": "Customer"
+}, {
+  "value": "3",
+  "text": "Operator"
+}, {
+  "value": "4",
+  "text": "Support"
+}, {
+  "value": "5",
+  "text": "Admin"
+}];T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"7file-digest://app/assets/api/xeditable-groups.json;TTF:charsetI"
+utf-8;F:digest"%]´UT…˛Å‚SÛ4}ân3sdBûù,ôaëÑç£7⁄:lengthiÙ:dependencies_digest"%e∑»w€r¶BΩåÚµóoå5qOC%œŒ	ÚıTV:idI"Ea37dfa7eed439c83a014977eb8af37f1db97739a0c7778b88d00d91a7a75973c;F:
+mtimel+æY

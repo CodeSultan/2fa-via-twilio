@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  exchange_type: MyString
+  frequency_type: MyString
+  invest_type: false
+
+two:
+  user_id: MyString
+  exchange_type: MyString
+  frequency_type: MyString
+  invest_type: false

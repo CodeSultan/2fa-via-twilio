@@ -1,0 +1,51 @@
+
+
+<% provide(:title, "Log in") %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
+  <style>
+    .login_form {
+      margin-bottom: 25px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="block-center mt-xl wd-xl">
+    <!-- START panel-->
+    <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center">
+        <a href="#">
+          <img src="<%= image_path('angle/logo.png') %>" alt="Image" class="block-center img-rounded" />
+        </a>
+      </div>
+      <div class="panel-body">
+        <p class="text-center pv">SIGN IN TO CONTINUE.</p>
+        <%= flash.now[:danger] %>
+        <%= form_for(:session, url: login_path, role: "form", class: "mb-lg", novalidate: "") do |f| %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control login_form' %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control login_form' %>
+
+            <%= f.submit "Log in", class: "btn btn-primary login_form form-control" %>
+        <% end %>
+
+        <p class="pt-lg text-center">Need to Signup?</p><a href="/register" class="btn btn-block btn-default">Register Now</a>
+      </div>
+    </div>
+    <!-- END panel-->
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Landing Page Template">
+  <meta name="keywords" content="bootstrap, app, theme">
+  <meta name="author" content="@themicon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Angle - Landing Page</title>
+
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic" rel="stylesheet" type="text/css">
+
+  <script>
+      if ( window.jQBrowser.mobile && top.location != location) top.location.href = document.location.href;
+  </script>
+
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body style="overflow: auto">
+
+  <div class="container">
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+  </div>
+
+  <!-- START HEADER-->
+  <%= render partial: "layouts/partials/header" %>
+  <!-- END HEADER-->
+
+  <!-- START APP SHOTS-->
+  <%= render partial: "layouts/partials/versions" %>
+
+  <!-- START FEATURE LIST-->
+  <%= render partial: "layouts/partials/features" %>
+  <!-- END FEATURE LIST-->
+
+  <!-- START PIC TEXT LEFT-->
+  <%= render partial: "layouts/partials/desc2" %>
+  <!-- END PIC TEXT LEFT-->
+
+  <!-- START PIC TEXT RIGHT-->
+  <%= render partial: "layouts/partials/desc1" %>
+  <!-- END PIC TEXT RIGHT-->
+
+  <!-- START APP SHOTS-->
+  <%= render partial: "layouts/partials/shots" %>
+  <!-- END APP SHOTS-->
+
+  <!-- START TESTIMONIAL SLIDER-->
+  <%= render partial: "layouts/partials/feedbacks" %>
+  <!-- END TESTIMONIAL SLIDER-->
+
+  <!-- START PLAN TABLE-->
+  <%= render partial: "layouts/partials/plans" %>
+  <!-- END PLAN TABLE-->
+
+  <!-- START DOWNLOAD-->
+  <%= render partial: "layouts/partials/download" %>
+  <!-- END DOWNLOAD-->
+
+  <!-- START PRODUCTS-->
+  <%= render partial: "layouts/partials/products" %>
+
+  <!-- START PLAN TABLE-->
+  <%= render partial: "layouts/partials/contact" %>
+
+  <!-- START FOOTER-->
+  <%= render partial: "layouts/partials/footer" %>
+  <!-- END FOOTER-->
+
+</body>
+
+</html>

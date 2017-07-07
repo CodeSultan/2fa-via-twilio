@@ -1,0 +1,38 @@
+
+<div style="text-align: right; padding: 20px 50px">
+  <%= link_to "Go to Home", root_path %>
+</div>
+<div class="container" style="width: 80%; margin: auto">
+  <h1 style="text-align: center; margin-top: 5%">My Orders</h1>
+
+  <%= link_to "Create Order", new_order_path, remote: true, class: "btn btn-primary", style: "margin: 20px 0px" %>
+
+  <div class="new-order"></div>
+
+  <table class="table table-bordered table-striped table-hover" role="grid">
+    <thead style="border-radius: 5px">
+    <tr>
+      <th>Order Name</th>
+      <th>API Key</th>
+      <th>API Secret Key</th>
+      <th>Exchange type</th>
+      <th>Frequency type</th>
+      <th>Invest type</th>
+      <th>Amount</th>
+      <th>Created time</th>
+      <th>Updated time</th>
+      <th>Verified</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody class="order-index">
+    <%= render "index" %>
+    </tbody>
+  </table>
+
+  <div><%=  %></div>
+
+</div>
+<div id="order-modal" class="modal fade"></div>
+<div id="order-verify-modal" class="modal fade"></div>

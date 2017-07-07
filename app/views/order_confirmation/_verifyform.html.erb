@@ -1,0 +1,27 @@
+
+<div class="modal-dialog">
+  <div class="modal-content" style="padding: 20px 30px 0px">
+    <%= csrf_meta_tags %>
+
+    <h3>Verifying Order</h3>
+    <h4>Just To Be Safe...2FA</h4>
+    <h5>
+      Your new order has been created, but we need to make sure you're a human
+      in control of the phone number you gave us. Can you please enter the
+      verification code we just sent to your phone?
+    </h5>
+
+    <%= form_tag orders_confirm_path do %>
+        <div class="form-group">
+          <%= label_tag :verification_code, "Verification Code:" %>
+          <%= text_field_tag :verification_code, '', class: "form-control" %>
+        </div>
+        <%= flash[:notice] %>
+        <br>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Verify Token</button>
+          <%= link_to "Remind later", "#", class: "btn", data: {dismiss: "modal"} %>
+        </div>
+    <% end -%>
+  </div>
+</div>

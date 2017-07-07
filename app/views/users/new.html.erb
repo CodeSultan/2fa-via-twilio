@@ -1,0 +1,67 @@
+<% provide(:title, "Sign Up") %>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
+  <style>
+    .signup_form {
+      margin-bottom: 15px !important;
+    }
+  </style>
+</head>
+
+<body style="overflow: auto">
+  <div class="block-center mt-xl wd-xl">
+    <!-- START panel-->
+    <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center">
+        <a href="#">
+          <img src="<%= image_path('angle/logo.png') %>" alt="Image" class="block-center img-rounded" />
+        </a>
+      </div>
+      <div class="panel-body">
+        <p class="text-center pv">SIGNUP TO GET INSTANT ACCESS.</p>
+
+        <%= form_for(@user, url: register_path, role: "form", class: "mb-lg") do |f| %>
+            <%= render 'shared/error_messages' %>
+
+            <%= f.label :firstName %>
+            <%= f.text_field :firstName, class: 'form-control signup_form' %>
+
+            <%= f.label :lastName %>
+            <%= f.text_field :lastName, class: 'form-control signup_form' %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control signup_form' %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control signup_form' %>
+
+            <%= f.label :password_confirmation, "Retype your password" %>
+            <%= f.password_field :password_confirmation, class: 'form-control signup_form' %>
+
+            <%= f.label :countryCode, "Country code" %>
+            <%= f.text_field :countryCode, class: 'form-control signup_form' %>
+
+            <%= f.label :phoneNumber, "Your phone number" %>
+            <%= f.text_field(:phoneNumber, class: 'form-control signup_form') %>  <!-- data: { mask: '(999) 999-9999' }, :placeholder=>"(999)-99-9999" -->
+
+            <%= f.submit "Create my account", class: "btn btn-primary form-control" %>
+        <% end %>
+
+        <p class="pt-lg text-center">Have an account?</p><a href="/login" class="btn btn-block btn-default">Login</a>
+      </div>
+    </div>
+    <!-- END panel-->
+  </div>
+</body>
+</html>
+
+
